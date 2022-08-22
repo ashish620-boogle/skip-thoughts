@@ -124,7 +124,7 @@ def encode(model, X, use_norm=True, verbose=True, batch_size=128, use_eos=False)
         ds[len(s)].append(i)
 
     # Get features. This encodes by length, in order to avoid wasting computation
-    for k in int(ds.keys()):
+    for k in ds.keys():
         if verbose:
             print (k)
         numbatches = len(ds[k]) / batch_size + 1
